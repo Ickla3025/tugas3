@@ -18,6 +18,32 @@
       padding: 0;
     }
 
+    .button {
+      display: inline-block;
+      background-color: var(--primary);
+      color: white;
+      padding: 12px 24px;
+      border-radius: var(--border-radius);
+      text-decoration: none;
+      font-weight: 600;
+      margin-top: 15px;
+      transition: all 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #d67808;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(232, 136, 26, 0.2);
+    }
+
+    .img-fluid {
+      max-width: 100%;
+      height: auto;
+      border-radius: var(--border-radius);
+      object-fit: cover;
+      display: block;
+    }
+
     body {
       font-family: 'Segoe UI', sans-serif;
       background-color: aqua;
@@ -27,8 +53,8 @@
 
     .corner-section {
       position: absolute;
-      top: 15px;
-      right: 20px;
+      top: 33px;
+      left: 30px;
       background-color: rgba(255, 255, 255, 0.9);
       padding: 8px 12px;
       border-radius: var(--border-radius);
@@ -122,10 +148,35 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      overflow: hidden;
+    }
+
+    .project img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .project:hover img {
+      transform: scale(1.05);
     }
 
     .project-caption {
-      margin-top: 8px;
+      margin-top: 15px;
+      text-align: left;
+    }
+
+    .project-caption h3 {
+      color: var(--primary);
+      margin-bottom: 8px;
+      font-size: 1.2rem;
+    }
+
+    .project-caption p {
+      color: #666;
+      font-size: 0.95rem;
+      line-height: 1.5;
     }
 
     /* MEDIA QUERIES */
@@ -202,11 +253,11 @@
     <div class="header-text">
       <h3>Selamat Datang di Website Ickla Mohammad Aljamendi</h3>
       <p>Saya adalah seorang bankers yang ingin beralih profesi menjadi Web Programer..</p>
-      <a href="#">Pelajari Lebih Lanjut</a>
+      <a href="#" class="button">Pelajari Lebih Lanjut</a>
     </div>
     
 
-    <img src="Fotoickla.jpeg.jpeg" alt="Deskripsi gambar" width="400" height="300">
+    <img class="img-fluid" src="Fotoickla.jpeg.jpeg" alt="Deskripsi gambar" width="400" height="300">
 
   </header>
 
@@ -236,21 +287,35 @@
     </div>
   </section>
 
-  <!-- Portofolio -->
-  <section id="portfolio" class="portfolio">
-    <h2>Portofolio</h2>
+  <!-- Portofolio -->  <section id="portfolio" class="portfolio">
+    <h2>Professional Achievements</h2>
     <div class="projects">
       <div class="project-box">
-        <div class="project">350 x 200</div>
-        <div class="project-caption">Proyek 1<br>Deskripsi proyek 1.</div>
+        <div class="project">
+          <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=500&auto=format" alt="Portfolio Achievement 1" class="img-fluid">
+        </div>
+        <div class="project-caption">
+          <h3>Credit Portfolio Growth</h3>
+          <p>Successfully managed and grew credit portfolio by 150% within 2 years through strategic client relationships and risk assessment.</p>
+        </div>
       </div>
       <div class="project-box">
-        <div class="project">350 x 200</div>
-        <div class="project-caption">Proyek 2<br>Deskripsi proyek 2.</div>
+        <div class="project">
+          <img src="https://images.unsplash.com/photo-1601597111158-2fceff292cdc?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Portfolio Achievement 2" class="img-fluid">
+        </div>
+        <div class="project-caption">
+          <h3>Digital Banking Initiative</h3>
+          <p>Led implementation of digital banking solutions resulting in 40% increase in customer satisfaction and 25% reduction in transaction processing time.</p>
+        </div>
       </div>
       <div class="project-box">
-        <div class="project">350 x 200</div>
-        <div class="project-caption">Proyek 3<br>Deskripsi proyek 3.</div>
+        <div class="project">
+          <img src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=500&auto=format" alt="Portfolio Achievement 3" class="img-fluid">
+        </div>
+        <div class="project-caption">
+          <h3>Risk Management Excellence</h3>
+          <p>Developed and implemented risk assessment framework reducing non-performing loans by 35% while maintaining portfolio growth.</p>
+        </div>
       </div>
     </div>
   </section>
